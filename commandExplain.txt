@@ -1,0 +1,81 @@
+*commit is like save points. it helps to go back or undo changes if we wish.
+
+git log //detailed history of commits.
+git log --oneline //to show the commits.
+git log --oneline --graph
+
+git reset --hard HEAD~1 //this will take you one step back(last commit (saved point));
+
+git status -s //shows untracked->staged->updated file in the repo.
+
+//branching
+-----------
+git branch feature/searchbar  //you can keep "feature/searchbar" as whatever you want.
+
+//switch to specific branch
+
+git switch feature/searchbar 
+
+//it makes a duplicate/copy of main branch that changes reflects only on that specific branch.
+
+//merging (you should be on main branch).
+git merge feature/searchbar   //that changes in the branch will be merge with main.
+                              *chances for occuring conflict.
+                              merging types -fast forward merge, three way merge.
+                              ff merge: changing the head location to the latest one.
+                              three way: merging main and branch file that becomes new file.
+
+//deleting branch
+git branch -d feature/searchbar
+
+git branch -C feature/footer  //this will create a branch named and switch to that branch.
+
+*stash
+git stash 
+
+//git stash :git will just remember the changes that you made in a brach but those are not add    the file while switching.
+
+git stash apply 
+
+//we can apply those remembered changes to when you come back that particular branch.
+
+git stash clear
+
+
+
+***colabration 
+
+//on owner side
+1.create a repo and add all you intial code.
+2.execute the showing commands of github on you vscode terminal.
+3.add memeber on colabration. they will accepteance mail.
+
+* after the 5th step of memeber side.
+on vscode terminal
+
+4.git fetch //displays the commit that the member made.
+5.git branch //shows the branches.
+6.
+select the specific branch and veriy the code then merge the file with main branch
+(main): git merge brachName
+7. git push origin //the main branch on stage0 which is on github the code will be updated
+
+
+//on colabrated memeber side terminal
+1.accept the colabration.
+
+on vscode terminal
+2.git clone <httpsLink> //repo httplink which will be avalilable on git hub repo
+3. create new branch add complete your work.
+4. add all files(git add .) and commit changes(git commit -m "message");
+5. git push -u origin brachchName
+
+
+
+*after the 7th step on owner side.
+
+6.git fetch
+7.git pull  // this will give the updated code by the owner
+
+
+ 

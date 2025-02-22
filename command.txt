@@ -1,0 +1,68 @@
+//commit history
+git log 
+git log --oneline 
+git log --oneline --graph
+
+git reset --hard HEAD~1 
+git status -s 
+
+//branching
+-----------
+git branch feature/searchbar  
+git switch feature/searchbar 
+
+//merging (you should be on main branch).
+----------
+git merge feature/searchbar   
+
+//deleting branch
+-----------------
+git branch -d feature/searchbar
+
+-------------
+git branch -C feature/footer  
+
+*stash
+-------
+git stash 
+git stash apply 
+git stash clear
+
+
+
+***colabration 
+
+//on owner side
+1.create a repo and add all you intial code.
+2.execute the showing commands of github on you vscode terminal.
+3.add memeber on colabration. they will accepteance mail.
+
+* after the 5th step of memeber side.
+on vscode terminal
+
+4.git fetch //displays the commit that the member made.
+5.git branch //shows the branches.
+6.select the specific branch and veriy the code then merge the file with main branch
+(main): 
+git merge <brachName>
+7. git push origin //the main branch on stage0 which is on github the code will be updated
+
+
+//on colabrated memeber side terminal
+1.accept the colabration.
+
+on vscode terminal
+2.git clone <httpsLink> //repo httplink which will be avalilable on git hub repo
+3. create new branch add complete your work.
+4. add all files(git add .) and commit changes(git commit -m "message");
+5. git push -u origin brachchName
+
+
+
+*after the 7th step on owner side.
+
+6.git fetch
+7.git pull  // this will give the updated code by the owner
+
+
+ 
